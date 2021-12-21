@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <style>
+      .submit{
+          padding: 10px;
+      }
+      body{
+        font-family: 'Ubuntu', sans-serif;
+        background: hsla(339, 100%, 55%, 1);
+        background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+        background: -moz-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+        background: -webkit-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+      }
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .row.content {height: 450px}
+    .sidenav {
+      padding-top: 20px;
+      background: hsla(141, 54%, 86%, 1);
+        background: linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+        background: -moz-linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+        background: -webkit-linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAEFD7", endColorstr="#F5BFD7", GradientType=1 );
+      height: 167%;
+    }
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+        
+      }
+      .row.content {height:auto;} 
+    }
+    img{
+      max-width:50%;
+    }
+    input[type=file]{
+    padding:10px;
+    }
+    #upload_img{
+        display:none;
+    }
+    #upload_text{
+        display:none;
+        padding: 10px;
+    }
+    #f1{
+        position:fixed;
+        top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    /* background: hsla(339, 100%, 55%, 1);
+        background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+        background: -moz-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+        background: -webkit-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%); */
+        /* background: hsla(221, 45%, 73%, 1);
+        background: linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+        background: -moz-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+        background: -webkit-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9BAFD9", endColorstr="#103783", GradientType=1 ); */
+        background: hsla(141, 54%, 86%, 1);
+        background: linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+        background: -moz-linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+        background: -webkit-linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAEFD7", endColorstr="#F5BFD7", GradientType=1 );
+        color:white;
+    }
+  </style>
+  <script>
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah')
+                .attr('src', e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+    function myFunction() {
+        document.getElementById("upload_img").style.display = "block";
+        document.getElementById("upload_text").style.display = "none";
+    }
+    function myFunction1() {
+        document.getElementById("upload_img").style.display = "none";
+        document.getElementById("upload_text").style.display = "block";
+    }
+</script>
+</head>
+<body>
+  
+    <div id="f1">
+        <form action="output.html" method="POST">
+            <div class="container-fluid text-center">    
+                <div class="row content">
+                  <div class="col-sm-2 sidenav">
+                  </div>
+                  <div class="col-sm-8 text-left"> 
+                    <center>
+                      <h1>Helix Translator (Eng - French)</h1>
+                   </center> 
+                    <hr>
+                    <center>
+                        <button type="button" class="btn btn-primary" id="btn1" onclick="myFunction()">Upload Image</button>
+                        <button type="button" class="btn btn-primary" id="btn2" onclick="myFunction1()">Text Input</button>
+                    </center>
+                    <div id="upload_img"> 
+                        <center>
+                            <h3>Upload the image to translate</h3>
+                            <input type='file'  onchange="readURL(this);" />
+                            <img id="blah" />
+                        </center>
+                    </div>
+                    <div id="upload_text">
+                        <center>
+                            <h3>Enter Text to Translate</h3>
+                            <input type="text" placeholder="enter the text" id="mytxt">
+                        </center>
+                    </div>
+                    
+                    <center>
+                        <div class="submit">
+                            <input type="submit" name="Translate" class="btn btn-primary">
+                        </div>
+                    </center>
+                  </div>
+                  <div class="col-sm-2 sidenav">
+                </div>
+              </div> 
+        </form>
+    </div>
+</body>
+</html>
